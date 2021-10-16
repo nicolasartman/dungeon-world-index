@@ -1,5 +1,5 @@
 import { get as calculateEditDistance } from "fast-levenshtein"
-import { Box, Grommet, Heading, Text, TextInput } from "grommet"
+import { Anchor, Box, Grommet, Heading, Text, TextInput } from "grommet"
 import minBy from "lodash/minBy"
 import { useMemo, useState } from "react"
 import "./App.css"
@@ -57,9 +57,18 @@ function App() {
     <div className="App">
       <Grommet full="min" theme={theme} themeMode="dark">
         <Box fill pad={{ horizontal: "40px" }}>
-          <Box fill direction="row" justify="center">
-            <Heading level="1">Dungeon World Index</Heading>
+          <Box fill direction="column" align="center">
+            <Heading level="1" margin={{ bottom: "0" }}>
+              Dungeon World Index
+            </Heading>
+            <Box height="20px" />
+            <Text>
+              Sourced from{" "}
+              <Anchor href="https://www.dungeonworldsrd.com">dungeonworldsrd.com</Anchor>.{" "}
+              <Anchor href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</Anchor>.
+            </Text>
           </Box>
+          <Box height="40px" />
           <Box direction="row" justify="center">
             <Box direction="row" width="100%" style={{ maxWidth: "500px" }}>
               <TextInput

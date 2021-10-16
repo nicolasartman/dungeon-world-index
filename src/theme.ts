@@ -1,10 +1,26 @@
 import { ThemeType } from "grommet"
 
 const theme: ThemeType = {
+  anchor: {
+    color: {
+      dark: "#22BBEE",
+      light: "#0099cc",
+    },
+  },
+  textInput: {
+    extend: {
+      "&": {
+        "border-color": "#999",
+      },
+      "&:focus": {
+        "box-shadow": "0 0 2px 2px #22BBEE",
+      },
+    },
+  },
   global: {
     colors: {
       brand: {
-        dark: "#7700cc",
+        dark: "#22BBEE",
         light: "#6600cc",
       },
       background: {
