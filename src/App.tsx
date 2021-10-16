@@ -39,7 +39,9 @@ const Item = ({ name, description, category }: ItemProps) => (
       </Box>
     </Box>
     <Box height="5px" />
-    <Text textAlign="start">{description}</Text>
+    <Text textAlign="start" style={{ whiteSpace: "pre-wrap" }}>
+      {description}
+    </Text>
   </Box>
 )
 
@@ -75,7 +77,7 @@ function App() {
           <Box height="40px" />
           <Box direction="column" align="center" fill>
             {results.map(({ name, description, category }) => (
-              <Item name={name} description={description} category={category} />
+              <Item key={name} name={name} description={description} category={category} />
             ))}
           </Box>
         </Box>
